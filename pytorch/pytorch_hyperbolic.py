@@ -7,7 +7,7 @@ import torch
 from torch import nn
 from torch.autograd import Variable
 from torch.utils.data import DataLoader, TensorDataset
-
+from tqdm import tqdm
 
 import matplotlib as mpl
 if torch.cuda.is_available(): mpl.use('Agg')
@@ -184,7 +184,9 @@ def build_dataset(G, lazy_generation, sample, subsample, scale, batch_size, weig
         logging.info("Built Data Sampler")
     else:
         Z   = gh.build_distance(G, scale, num_workers=int(num_workers) if num_workers is not None else 16)   # load the whole matrix
+        # remove first column and first row
         logging.info(f"Built distance matrix with {scale} factor")
+        print(Z)
 
         if subsample is not None:
             z = DataLoader(GraphRowSubSampler(G, scale, subsample, weight_fn, Z=Z), batch_size//subsample, shuffle=True, collate_fn=collate3)
@@ -259,7 +261,8 @@ def major_stats(G, n, m, lazy_generation, Z,z, fig, ax, writer, visualize, subsa
             ax_this = vis.get_ax(num_hypers, num_spheres, ax, emb, 0)
             ax_this.cla()
 
-        text_3d_only = False
+        '''EDIT'''
+        text_3d_only = True
 
         vis.draw_graph(G,m,fig, ax)
         if num_hypers > 0:
@@ -269,12 +272,12 @@ def major_stats(G, n, m, lazy_generation, Z,z, fig, ax, writer, visualize, subsa
             sdim = 0 if len(m.S) == 0 else len((m.S[0]).w[0])
             if sdim == 3: text_3d_only = True
 
-        if text_3d_only:
-            axlabel.text(-1.00, 1.0, 1.1, "Epoch "+str(m.epoch), fontsize=20)
-            axlabel.text(-1.00, 1.0, 0.8, "MAP "+str(mapscore)[0:5], fontsize=20)
-        else:
-            axlabel.text(0.70, 1.1, "Epoch "+str(m.epoch), fontsize=20)
-            axlabel.text(0.70, 1.0, "MAP "+str(mapscore)[0:5], fontsize=20)
+        # if text_3d_only:
+        #     axlabel.text(-1.00, 1.0, 1.1, "Epoch "+str(m.epoch), fontsize=20)
+        #     axlabel.text(-1.00, 1.0, 0.8, "MAP "+str(mapscore)[0:5], fontsize=20)
+        # else:
+        #     axlabel.text(0.70, 1.1, "Epoch "+str(m.epoch), fontsize=20)
+        #     axlabel.text(0.70, 1.0, "MAP "+str(mapscore)[0:5], fontsize=20)
 
         writer.grab_frame()
 
@@ -288,6 +291,7 @@ def major_stats(G, n, m, lazy_generation, Z,z, fig, ax, writer, visualize, subsa
 @argh.arg("dataset", help="dataset number")
 # model params
 @argh.arg("-d", "--dim", help="Dimension to use")
+
 @argh.arg("--hyp", help="Number of copies of hyperbolic space")
 @argh.arg("--edim", help="Euclidean dimension to use")
 @argh.arg("--euc", help="Number of copies of Euclidean space")
@@ -332,6 +336,7 @@ def major_stats(G, n, m, lazy_generation, Z,z, fig, ax, writer, visualize, subsa
 @argh.arg("--symloss")
 @argh.arg("-e", "--exponential-rescale", type=float, help="Exponential Rescale")
 @argh.arg("--visualize", help="Produce an animation (dimension 2 only)")
+
 def learn(dataset, dim=2, hyp=1, edim=1, euc=0, sdim=1, sph=0, scale=1., riemann=False, learning_rate=1e-1, decay_length=1000, decay_step=1.0, momentum=0.0, tol=1e-8, epochs=100, burn_in=0,
           use_yellowfin=False, use_adagrad=False, resample_freq=1000, print_freq=1, model_save_file=None, model_load_file=None, batch_size=16,
           num_workers=None, lazy_generation=False, log_name=None, log=False, warm_start=None, learn_scale=False, checkpoint_freq=100, sample=1., subsample=None,
@@ -353,7 +358,11 @@ def learn(dataset, dim=2, hyp=1, edim=1, euc=0, sdim=1, sph=0, scale=1., riemann
     logging.info(f"Commandline {sys.argv}")
     if model_save_file is None: logging.warn("No Model Save selected!")
     G  = load_graph.load_graph(dataset)
-    GM = nx.to_scipy_sparse_matrix(G, nodelist=list(range(G.order())))
+    GM = nx.to_scipy_sparse_matrix(G)
+    print(nx.adjacency_matrix(G))
+    print("------------")
+    print(G.order())
+    print(GM)
 
     # grab scale if warm starting:
     if warm_start:
@@ -458,7 +467,7 @@ def learn(dataset, dim=2, hyp=1, edim=1, euc=0, sdim=1, sph=0, scale=1., riemann
 
     # Log stats from import: when warmstarting, check that it matches Julia's stats
     logging.info(f"*** Initial Checkpoint. Computing Stats")
-    major_stats(GM,n,m, lazy_generation, Z, z, fig, ax, writer, visualize, subsample)
+    # major_stats(GM,n,m, lazy_generation, Z, z, fig, ax, writer, visualize, subsample)
     logging.info("*** End Initial Checkpoint\n")
 
     # track best stats
@@ -466,7 +475,7 @@ def learn(dataset, dim=2, hyp=1, edim=1, euc=0, sdim=1, sph=0, scale=1., riemann
     best_dist   = 1.0e10
     best_wcdist = 1.0e10
     best_map    = 0.0
-    for i in range(m.epoch+1, m.epoch+epochs+1):
+    for i in tqdm(range(m.epoch+1, m.epoch+epochs+1)):
         lr_burn_in.step()
         # lr_decay.step()
         # scale_decay.step()
@@ -549,7 +558,7 @@ def learn(dataset, dim=2, hyp=1, edim=1, euc=0, sdim=1, sph=0, scale=1., riemann
     logging.info(f"final loss={l}")
     logging.info(f"best loss={best_loss}, distortion={best_dist}, map={best_map}, wc_dist={best_wcdist}")
 
-    final_dist, final_wc, final_me, final_mc, final_map = major_stats(GM, n, m, lazy_generation, Z,z, fig, ax, writer, False, subsample)
+    # final_dist, final_wc, final_me, final_mc, final_map = major_stats(GM, n, m, lazy_generation, Z,z, fig, ax, writer, False, subsample)
 
 
     if log_name is not None:

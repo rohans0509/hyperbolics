@@ -14,7 +14,7 @@ def build_distance(G, scale, num_workers=None):
     p = Pool() if num_workers is None else Pool(num_workers)
     
     #adj_mat_original = nx.to_scipy_sparse_matrix(G)
-    adj_mat_original = nx.to_scipy_sparse_matrix(G, nodelist=list(range(G.order())))
+    adj_mat_original = nx.to_scipy_sparse_matrix(G)
 
     # Simple chunking
     nChunks     = 128 if num_workers is not None and num_workers > 1 else n
@@ -32,6 +32,7 @@ def build_distance(G, scale, num_workers=None):
         H = djikstra_wrapper( (adj_mat_original, list(range(n))) )
         
     H *= scale
+
     return H
 
 def build_distance_hyperbolic(G, scale):

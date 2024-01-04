@@ -79,7 +79,7 @@ def run_pytorch(run_name, datasets, epochs, batch_size, warm_start=False, comb=F
                 '--log-name', log_name,
                 '--batch-size', str(batch_size),
                 '--epochs', str(epochs),
-                '-r', str(rank),
+                # '-r', str(rank),
                 '--checkpoint-freq', '100',
                 '--use-svrg',
                 '-T 0',
@@ -118,7 +118,7 @@ def run(run_name, datasets=[], epochs=5000, batch_size=1024):
     # pytorch by itself
     run_pytorch(run_name, datasets, epochs=epochs, batch_size=batch_size, warm_start=False)
     # pytorch with warmstart
-    run_pytorch(run_name, datasets, epochs=epochs, batch_size=batch_size, warm_start=True, comb=True)
+    # run_pytorch(run_name, datasets, epochs=epochs, batch_size=batch_size, warm_start=True, comb=True)
 
 
 

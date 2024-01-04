@@ -1,0 +1,368 @@
+ffmpeg started on 2023-12-27 at 17:36:34
+Report written to "ffmpeg-20231227-173634.log"
+Log level: 48
+Command line:
+ffmpeg -r 10 -i "_tmp%07d.png" -vframes 50 -vcodec h264 -pix_fmt yuv420p -report -metadata "artist=HazyResearch" -y animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4
+ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers
+  built with Apple clang version 12.0.0 (clang-1200.0.32.29)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/4.4_1 --enable-shared --enable-pthreads --enable-version3 --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libbluray --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Splitting the commandline.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '10'.
+Reading option '-i' ... matched as input url with argument '_tmp%07d.png'.
+Reading option '-vframes' ... matched as option 'vframes' (set the number of video frames to output) with argument '50'.
+Reading option '-vcodec' ... matched as option 'vcodec' (force video codec ('copy' to copy stream)) with argument 'h264'.
+Reading option '-pix_fmt' ... matched as option 'pix_fmt' (set pixel format) with argument 'yuv420p'.
+Reading option '-report' ... matched as option 'report' (generate a report) with argument '1'.
+Reading option '-metadata' ... matched as option 'metadata' (add metadata) with argument 'artist=HazyResearch'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option report (generate a report) with argument 1.
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url _tmp%07d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 10.
+Successfully parsed a group of options.
+Opening an input file: _tmp%07d.png.
+[image2 @ 0x7f935880b400] Opening '_tmp0000000.png' for reading
+[file @ 0x7f9359008780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359008ec0] Statistics: 75705 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000001.png' for reading
+[file @ 0x7f9359704080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704200] Statistics: 76530 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000002.png' for reading
+[file @ 0x7f935870a640] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870a9c0] Statistics: 75445 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000003.png' for reading
+[file @ 0x7f935870a6c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870a9c0] Statistics: 76598 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000004.png' for reading
+[file @ 0x7f9359104300] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359104480] Statistics: 76963 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000005.png' for reading
+[file @ 0x7f935870aa40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359306740] Statistics: 76475 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000006.png' for reading
+[file @ 0x7f935951f980] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f93597041c0] Statistics: 76069 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000007.png' for reading
+[file @ 0x7f935951fa80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935951fb00] Statistics: 75736 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000008.png' for reading
+[file @ 0x7f93597041c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704380] Statistics: 76825 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000009.png' for reading
+[file @ 0x7f9359704380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704500] Statistics: 77316 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000010.png' for reading
+[file @ 0x7f9359704500] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704580] Statistics: 76551 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000011.png' for reading
+[file @ 0x7f935951fc00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935951fc80] Statistics: 76826 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000012.png' for reading
+[file @ 0x7f935870ac80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359405140] Statistics: 76700 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000013.png' for reading
+[file @ 0x7f9359704580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704600] Statistics: 77014 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000014.png' for reading
+[file @ 0x7f9359009100] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704500] Statistics: 76379 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000015.png' for reading
+[file @ 0x7f935951fc80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935951fe00] Statistics: 77013 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000016.png' for reading
+[file @ 0x7f93592060c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f93592061c0] Statistics: 78009 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000017.png' for reading
+[file @ 0x7f93592061c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206380] Statistics: 75704 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000018.png' for reading
+[file @ 0x7f935951fd00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935951fe00] Statistics: 75728 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000019.png' for reading
+[file @ 0x7f935951fe00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935951ff80] Statistics: 77492 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000020.png' for reading
+[file @ 0x7f935951ff80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520000] Statistics: 76945 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000021.png' for reading
+[file @ 0x7f9359520080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520180] Statistics: 77681 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000022.png' for reading
+[file @ 0x7f935870ad00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870ad80] Statistics: 76122 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000023.png' for reading
+[file @ 0x7f9359206380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206400] Statistics: 75665 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000024.png' for reading
+[file @ 0x7f935870ad80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870af00] Statistics: 75161 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000025.png' for reading
+[file @ 0x7f9359520200] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520280] Statistics: 77072 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000026.png' for reading
+[file @ 0x7f9359206400] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206580] Statistics: 75052 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000027.png' for reading
+[file @ 0x7f935870ae00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870af00] Statistics: 74818 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000028.png' for reading
+[file @ 0x7f935870af00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870b0c0] Statistics: 75432 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000029.png' for reading
+[file @ 0x7f9359206600] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206680] Statistics: 75247 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000030.png' for reading
+[file @ 0x7f9359009200] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f93590093c0] Statistics: 77424 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000031.png' for reading
+[file @ 0x7f93590093c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359009540] Statistics: 77292 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000032.png' for reading
+[file @ 0x7f9359206680] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206700] Statistics: 74872 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000033.png' for reading
+[file @ 0x7f9359009540] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f93590095c0] Statistics: 75514 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000034.png' for reading
+[file @ 0x7f9359206700] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206880] Statistics: 77360 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000035.png' for reading
+[file @ 0x7f9359520300] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520380] Statistics: 76269 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000036.png' for reading
+[file @ 0x7f9359206640] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206880] Statistics: 77490 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000037.png' for reading
+[file @ 0x7f9359206880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206a40] Statistics: 76957 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000038.png' for reading
+[file @ 0x7f9359520380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520500] Statistics: 76416 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000039.png' for reading
+[file @ 0x7f93594050c0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359405280] Statistics: 75705 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000040.png' for reading
+[file @ 0x7f9359704500] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359704780] Statistics: 77132 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000041.png' for reading
+[file @ 0x7f9359520500] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520580] Statistics: 73138 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000042.png' for reading
+[file @ 0x7f9359009740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359009800] Statistics: 76550 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000043.png' for reading
+[file @ 0x7f9359206b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206bc0] Statistics: 76814 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000044.png' for reading
+[file @ 0x7f9359520580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520700] Statistics: 75499 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000045.png' for reading
+[file @ 0x7f9359520780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359520800] Statistics: 77112 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000046.png' for reading
+[file @ 0x7f935870af80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f935870b0c0] Statistics: 75852 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000047.png' for reading
+[file @ 0x7f9359009840] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f93590098c0] Statistics: 75659 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000048.png' for reading
+[file @ 0x7f9359206c40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206cc0] Statistics: 77033 bytes read, 0 seeks
+[image2 @ 0x7f935880b400] Opening '_tmp0000049.png' for reading
+[file @ 0x7f9359206cc0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 0x7f9359206d40] Statistics: 76902 bytes read, 0 seeks
+Input #0, image2, from '_tmp%07d.png':
+  Duration: 00:00:02.00, start: 0.000000, bitrate: N/A
+  Stream #0:0, 50, 1/25: Video: png, rgba(pc), 1080x1080 [SAR 4251:4251 DAR 1:1], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: output url animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4.
+Applying option vframes (set the number of video frames to output) with argument 50.
+Applying option vcodec (force video codec ('copy' to copy stream)) with argument h264.
+Applying option pix_fmt (set pixel format) with argument yuv420p.
+Applying option metadata (add metadata) with argument artist=HazyResearch.
+Successfully parsed a group of options.
+Opening an output file: animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4.
+Matched encoder 'libx264' for codec 'h264'.
+[file @ 0x7f935870a140] Setting default whitelist 'file,crypto,data'
+Successfully opened the file.
+detected 8 logical cores
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] Setting 'video_size' to value '1080x1080'
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] Setting 'time_base' to value '1/10'
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] Setting 'pixel_aspect' to value '4251/4251'
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] Setting 'frame_rate' to value '10/1'
+[graph 0 input from stream 0:0 @ 0x7f9359008ec0] w:1080 h:1080 pixfmt:rgba tb:1/10 fr:10/1 sar:4251/4251
+[format @ 0x7f9359105600] Setting 'pix_fmts' to value 'yuv420p'
+[auto_scaler_0 @ 0x7f9359105880] Setting 'flags' to value 'bicubic'
+[auto_scaler_0 @ 0x7f9359105880] w:iw h:ih flags:'bicubic' interl:0
+[format @ 0x7f9359105600] auto-inserting filter 'auto_scaler_0' between the filter 'Parsed_null_0' and the filter 'format'
+[AVFilterGraph @ 0x7f9359704c40] query_formats: 4 queried, 2 merged, 1 already done, 0 delayed
+[auto_scaler_0 @ 0x7f9359105880] w:1080 h:1080 fmt:rgba sar:4251/4251 -> w:1080 h:1080 fmt:yuv420p sar:1/1 flags:0x4
+[libx264 @ 0x7f935880f800] using mv_range_thread = 40
+[libx264 @ 0x7f935880f800] using SAR=1/1
+[libx264 @ 0x7f935880f800] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x7f935880f800] profile High, level 3.2, 4:2:0, 8-bit
+[libx264 @ 0x7f935880f800] 264 - core 161 r3049 55d517b - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=10 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4':
+  Metadata:
+    artist          : HazyResearch
+    encoder         : Lavf58.76.100
+  Stream #0:0, 0, 1/10240: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1080x1080 [SAR 1:1 DAR 1:1], q=2-31, 10 fps, 10240 tbn
+    Metadata:
+      encoder         : Lavc58.134.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+Clipping frame in rate conversion by 0.000008
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+frame=   47 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+cur_dts is invalid st:0 (0) [init:1 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+No more output streams to write to, finishing.
+[libx264 @ 0x7f935880f800] frame=   0 QP=16.01 NAL=3 Slice:I Poc:0   I:4624 P:0    SKIP:0    size=18138 bytes
+[libx264 @ 0x7f935880f800] frame=   1 QP=21.34 NAL=2 Slice:P Poc:8   I:238  P:322  SKIP:4064 size=12605 bytes
+[libx264 @ 0x7f935880f800] frame=   2 QP=25.79 NAL=2 Slice:B Poc:4   I:142  P:319  SKIP:4163 size=9604 bytes
+[libx264 @ 0x7f935880f800] frame=   3 QP=26.89 NAL=0 Slice:B Poc:2   I:82   P:373  SKIP:4169 size=7705 bytes
+[libx264 @ 0x7f935880f800] frame=   4 QP=22.81 NAL=0 Slice:B Poc:6   I:80   P:370  SKIP:4174 size=7706 bytes
+[libx264 @ 0x7f935880f800] frame=   5 QP=18.65 NAL=2 Slice:P Poc:16  I:245  P:242  SKIP:4137 size=11471 bytes
+[libx264 @ 0x7f935880f800] frame=   6 QP=25.69 NAL=2 Slice:B Poc:12  I:75   P:393  SKIP:4156 size=9643 bytes
+[libx264 @ 0x7f935880f800] frame=   7 QP=26.92 NAL=0 Slice:B Poc:10  I:98   P:380  SKIP:4146 size=9438 bytes
+[libx264 @ 0x7f935880f800] frame=   8 QP=27.17 NAL=0 Slice:B Poc:14  I:83   P:402  SKIP:4139 size=8177 bytes
+[libx264 @ 0x7f935880f800] frame=   9 QP=24.00 NAL=2 Slice:P Poc:24  I:253  P:210  SKIP:4161 size=11929 bytes
+[libx264 @ 0x7f935880f800] frame=  10 QP=25.37 NAL=2 Slice:B Poc:20  I:90   P:388  SKIP:4146 size=9615 bytes
+[libx264 @ 0x7f935880f800] frame=  11 QP=26.71 NAL=0 Slice:B Poc:18  I:90   P:382  SKIP:4152 size=8939 bytes
+[libx264 @ 0x7f935880f800] frame=  12 QP=26.06 NAL=0 Slice:B Poc:22  I:73   P:416  SKIP:4135 size=7396 bytes
+[libx264 @ 0x7f935880f800] frame=  13 QP=23.31 NAL=2 Slice:P Poc:32  I:213  P:345  SKIP:4066 size=11764 bytes
+[libx264 @ 0x7f935880f800] frame=  14 QP=25.26 NAL=2 Slice:B Poc:28  I:69   P:423  SKIP:4132 size=9628 bytes
+[libx264 @ 0x7f935880f800] frame=  15 QP=26.33 NAL=0 Slice:B Poc:26  I:83   P:400  SKIP:4141 size=8505 bytes
+[libx264 @ 0x7f935880f800] frame=  16 QP=26.67 NAL=0 Slice:B Poc:30  I:80   P:410  SKIP:4134 size=8096 bytes
+[libx264 @ 0x7f935880f800] frame=  17 QP=22.55 NAL=2 Slice:P Poc:40  I:215  P:347  SKIP:4062 size=11415 bytes
+[libx264 @ 0x7f935880f800] frame=  18 QP=24.77 NAL=2 Slice:B Poc:36  I:90   P:378  SKIP:4156 size=9599 bytes
+[libx264 @ 0x7f935880f800] frame=  19 QP=26.26 NAL=0 Slice:B Poc:34  I:89   P:360  SKIP:4175 size=7890 bytes
+[libx264 @ 0x7f935880f800] frame=  20 QP=26.12 NAL=0 Slice:B Poc:38  I:92   P:382  SKIP:4150 size=8935 bytes
+[libx264 @ 0x7f935880f800] frame=  21 QP=23.40 NAL=2 Slice:P Poc:48  I:196  P:309  SKIP:4119 size=10026 bytes
+[libx264 @ 0x7f935880f800] frame=  22 QP=25.43 NAL=2 Slice:B Poc:44  I:65   P:403  SKIP:4156 size=7392 bytes
+[libx264 @ 0x7f935880f800] frame=  23 QP=27.10 NAL=0 Slice:B Poc:42  I:89   P:361  SKIP:4174 size=8232 bytes
+[libx264 @ 0x7f935880f800] frame=  24 QP=26.83 NAL=0 Slice:B Poc:46  I:61   P:370  SKIP:4193 size=6610 bytes
+[libx264 @ 0x7f935880f800] frame=  25 QP=23.33 NAL=2 Slice:P Poc:56  I:239  P:324  SKIP:4061 size=11546 bytes
+[libx264 @ 0x7f935880f800] frame=  26 QP=19.51 NAL=2 Slice:B Poc:52  I:93   P:376  SKIP:4155 size=9690 bytes
+[libx264 @ 0x7f935880f800] frame=  27 QP=25.86 NAL=0 Slice:B Poc:50  I:49   P:380  SKIP:4195 size=7448 bytes
+[libx264 @ 0x7f935880f800] frame=  28 QP=26.80 NAL=0 Slice:B Poc:54  I:86   P:381  SKIP:4157 size=8585 bytes
+[libx264 @ 0x7f935880f800] frame=  29 QP=22.52 NAL=2 Slice:P Poc:64  I:206  P:270  SKIP:4148 size=10353 bytes
+[libx264 @ 0x7f935880f800] frame=  30 QP=24.60 NAL=2 Slice:B Poc:60  I:73   P:396  SKIP:4155 size=8490 bytes
+[libx264 @ 0x7f935880f800] frame=  31 QP=26.22 NAL=0 Slice:B Poc:58  I:102  P:357  SKIP:4165 size=9513 bytes
+[libx264 @ 0x7f935880f800] frame=  32 QP=24.92 NAL=0 Slice:B Poc:62  I:61   P:400  SKIP:4163 size=5940 bytes
+[libx264 @ 0x7f935880f800] frame=  33 QP=18.89 NAL=2 Slice:P Poc:72  I:176  P:269  SKIP:4179 size=10712 bytes
+[libx264 @ 0x7f935880f800] frame=  34 QP=25.61 NAL=2 Slice:B Poc:68  I:56   P:404  SKIP:4164 size=7969 bytes
+[libx264 @ 0x7f935880f800] frame=  35 QP=26.54 NAL=0 Slice:B Poc:66  I:57   P:404  SKIP:4163 size=6633 bytes
+[libx264 @ 0x7f935880f800] frame=  36 QP=26.79 NAL=0 Slice:B Poc:70  I:93   P:360  SKIP:4171 size=8826 bytes
+[libx264 @ 0x7f935880f800] frame=  37 QP=23.40 NAL=2 Slice:P Poc:80  I:238  P:286  SKIP:4100 size=11819 bytes
+[libx264 @ 0x7f935880f800] frame=  38 QP=24.83 NAL=2 Slice:B Poc:76  I:54   P:398  SKIP:4172 size=8318 bytes
+[libx264 @ 0x7f935880f800] frame=  39 QP=26.08 NAL=0 Slice:B Poc:74  I:63   P:368  SKIP:4193 size=6727 bytes
+[libx264 @ 0x7f935880f800] frame=  40 QP=26.47 NAL=0 Slice:B Poc:78  I:50   P:386  SKIP:4188 size=6257 bytes
+[libx264 @ 0x7f935880f800] frame=  41 QP=23.41 NAL=2 Slice:P Poc:88  I:219  P:334  SKIP:4071 size=11069 bytes
+[libx264 @ 0x7f935880f800] frame=  42 QP=21.70 NAL=2 Slice:B Poc:84  I:78   P:395  SKIP:4151 size=9253 bytes
+[libx264 @ 0x7f935880f800] frame=  43 QP=25.63 NAL=0 Slice:B Poc:82  I:103  P:356  SKIP:4165 size=8230 bytes
+[libx264 @ 0x7f935880f800] frame=  44 QP=26.70 NAL=0 Slice:B Poc:86  I:120  P:365  SKIP:4139 size=9383 bytes
+[libx264 @ 0x7f935880f800] frame=  45 QP=25.49 NAL=2 Slice:P Poc:96  I:190  P:296  SKIP:4138 size=9975 bytes
+[libx264 @ 0x7f935880f800] frame=  46 QP=24.78 NAL=2 Slice:B Poc:92  I:83   P:409  SKIP:4132 size=9124 bytes
+[libx264 @ 0x7f935880f800] frame=  47 QP=26.97 NAL=0 Slice:B Poc:90  I:80   P:374  SKIP:4170 size=8701 bytes
+[libx264 @ 0x7f935880f800] frame=  48 QP=25.85 NAL=0 Slice:B Poc:94  I:74   P:401  SKIP:4149 size=8013 bytes
+[libx264 @ 0x7f935880f800] frame=  49 QP=26.35 NAL=2 Slice:P Poc:98  I:159  P:383  SKIP:4082 size=8253 bytes
+frame=   50 fps= 49 q=-1.0 Lsize=     453kB time=00:00:04.70 bitrate= 788.9kbits/s speed=4.57x    
+video:451kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.327723%
+Input file #0 (_tmp%07d.png):
+  Input stream #0:0 (video): 50 packets read (3817263 bytes); 50 frames decoded; 
+  Total: 50 packets (3817263 bytes) demuxed
+Output file #0 (animations/spiral.H0-0.E0-0.S1-1.lr5.0.ep10000.seed0.mp4):
+  Output stream #0:0 (video): 50 frames encoded; 50 packets muxed (461975 bytes); 
+  Total: 50 packets (461975 bytes) muxed
+50 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 0x7f935870b640] Statistics: 2 seeks, 5 writeouts
+[libx264 @ 0x7f935880f800] frame I:1     Avg QP:16.01  size: 18138
+[libx264 @ 0x7f935880f800] frame P:13    Avg QP:22.82  size: 10995
+[libx264 @ 0x7f935880f800] frame B:36    Avg QP:25.67  size:  8339
+[libx264 @ 0x7f935880f800] consecutive B-frames:  4.0%  0.0%  0.0% 96.0%
+[libx264 @ 0x7f935880f800] mb I  I16..4: 44.3% 47.1%  8.5%
+[libx264 @ 0x7f935880f800] mb P  I16..4:  0.3%  1.8%  2.5%  P16..4:  3.9%  1.7%  1.0%  0.0%  0.0%    skip:88.8%
+[libx264 @ 0x7f935880f800] mb B  I16..4:  0.1%  0.5%  1.1%  B16..8:  4.8%  2.2%  1.0%  direct: 0.4%  skip:90.0%  L0:52.1% L1:43.9% BI: 4.0%
+[libx264 @ 0x7f935880f800] 8x8 transform intra:39.9% inter:17.7%
+[libx264 @ 0x7f935880f800] coded y,uvDC,uvAC intra: 24.6% 22.8% 21.2% inter: 1.8% 2.8% 2.7%
+[libx264 @ 0x7f935880f800] i16 v,h,dc,p: 85% 10%  6%  0%
+[libx264 @ 0x7f935880f800] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38%  8% 53%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x7f935880f800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 17% 33%  4%  4%  4%  4%  5%  4%
+[libx264 @ 0x7f935880f800] i8c dc,h,v,p: 81%  7% 10%  2%
+[libx264 @ 0x7f935880f800] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x7f935880f800] ref P L0: 57.7%  3.6% 20.8% 17.9%
+[libx264 @ 0x7f935880f800] ref B L0: 68.0% 23.3%  8.7%
+[libx264 @ 0x7f935880f800] ref B L1: 84.7% 15.3%
+[libx264 @ 0x7f935880f800] kb/s:738.06

@@ -1,0 +1,18 @@
+2023-11-28 00:14:50,703 Commandline ['pytorch/pytorch_hyperbolic.py', 'learn', 'data/edges/phylo_tree.edges', '--log-name', 'phylo/phylo_tree.r200.log', '--batch-size', '1024', '--epochs', '20', '--checkpoint-freq', '100', '--use-svrg', '-T', '0', '--learning-rate', '5']
+2023-11-28 00:14:50,703 No Model Save selected!
+2023-11-28 00:14:50,714 Loaded Graph data/edges/phylo_tree.edges with 344 nodes scale=1.0
+2023-11-28 00:14:50,714 Building dataset
+2023-11-28 00:14:50,842 	Final Matrix (344, 344)
+2023-11-28 00:14:50,843 Built distance matrix with 1.0 factor
+2023-11-28 00:14:50,870 Built data loader
+2023-11-28 00:14:50,870 Creating a fresh model warm_start?=None
+2023-11-28 00:14:50,870 	 Warmstarting? None None 344
+2023-11-28 21:24:26,299 Commandline ['pytorch/pytorch_hyperbolic.py', 'learn', 'data/edges/phylo_tree.edges', '--log-name', 'phylo/phylo_tree.r200.log', '--batch-size', '1024', '--epochs', '20', '--checkpoint-freq', '100', '--use-svrg', '-T', '0', '--learning-rate', '5']
+2023-11-28 21:24:26,301 No Model Save selected!
+2023-11-28 21:24:26,305 Loaded Graph data/edges/phylo_tree.edges with 344 nodes scale=1.0
+2023-11-28 21:24:26,305 Building dataset
+2023-11-28 21:24:26,390 	Final Matrix (344, 344)
+2023-11-28 21:24:26,391 Built distance matrix with 1.0 factor
+2023-11-28 21:24:26,416 Built data loader
+2023-11-28 21:24:26,416 Creating a fresh model warm_start?=None
+2023-11-28 21:24:26,416 	 Warmstarting? None None 344

@@ -1,5 +1,5 @@
 # PyTorch Install
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM ogvalt/cuda:9.0-cudnn7.0-devel-ubuntu16.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
          build-essential \

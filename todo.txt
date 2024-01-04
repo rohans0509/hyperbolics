@@ -1,0 +1,14 @@
+Generated data
+PCA for 50
+Library generate points
+Some test datasets
+All pairs of Hyperbolic spehrical euclidean
+Variety of noise levels
+
+Embedding metrics Library
+
+Reduce k to check MAP score?
+
+Q-score
+Map score
+Use datasets from the library

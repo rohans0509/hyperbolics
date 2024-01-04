@@ -187,6 +187,8 @@ def draw_graph(G, m, fig, ax):
     sdim = 0 if len(m.S) == 0 else len((m.S[0]).w[0])
     for emb in range(num_spheres):
         ax_this = get_ax(num_hypers, num_spheres, ax, emb, is_sphere=1)
+
+        ''' EDIT'''
         if sdim == 3:
             spherical_setup_3d(fig, ax_this)
         else:
@@ -209,24 +211,30 @@ def draw_graph(G, m, fig, ax):
             c = get_third_point(a,b)
             draw_geodesic(a,b,c,ax_this_hyp, edge[0], edge[1])
 
-        # let's draw the edges on the sphere; these are geodesics    
-        if sdim == 3:
-            for emb in range(num_spheres):
-                ax_this = get_ax(num_hypers, num_spheres, ax, emb, is_sphere=1)
-                a = ((torch.index_select(m.S[emb].w, 0, idx[0])).clone()).detach().cpu().numpy()[0]
-                b = ((torch.index_select(m.S[emb].w, 0, idx[1])).clone()).detach().cpu().numpy()[0]
-                draw_geodesic_on_circle(a, b, ax_this)
+        # let's draw the edges on the sphere; these are geodesics   
+        '''EDIT''' 
+        # if sdim == 3:
+        #     for emb in range(num_spheres):
+        #         ax_this = get_ax(num_hypers, num_spheres, ax, emb, is_sphere=1)
+        #         a = ((torch.index_select(m.S[emb].w, 0, idx[0])).clone()).detach().cpu().numpy()[0]
+        #         b = ((torch.index_select(m.S[emb].w, 0, idx[1])).clone()).detach().cpu().numpy()[0]
+        #         draw_geodesic_on_circle(a, b, ax_this)
 
+    '''EDIT'''
     for node in Gr.nodes():
         idx = torch.LongTensor([int(node)]).to(device)
         for emb in range(num_spheres):
             ax_this = get_ax(num_hypers, num_spheres, ax, emb, is_sphere=1)
-            v = ((torch.index_select(m.S[emb].w, 0, idx)).clone()).detach().cpu().numpy()[0]
+            v_spherical = ((torch.index_select(m.S[emb].w, 0, idx)).clone()).detach().cpu().numpy()[0]
+            # v_euclidean = ((torch.index_select(m.E[emb].w, 0, idx)).clone()).detach().cpu().numpy()[0]
+
+            # stack
+            # v = np.hstack((v_spherical, v_euclidean))
 
             if sdim == 3:
-                draw_points_on_sphere(v, node, ax_this)
+                draw_points_on_sphere(v_spherical, node, ax_this)
             else:
-                draw_points_on_circle(v, node, ax_this)
+                draw_points_on_circle(v_spherical, node, ax_this)
 
         for emb in range(num_hypers):
             ax_this_hyp = get_ax(num_hypers, num_spheres, ax, emb, is_sphere=0)
@@ -257,8 +265,12 @@ def setup_plot(m, name=None, draw_circle=False):
         name += '.mp4'
 
     writer.setup(fig, name, dpi=108)
-    sdim = 0 if len(m.S) == 0 else len((m.S[0]).w[0])
+    # sdim = 0 if len(m.S) == 0 else len((m.S[0]).w[0])
 
+    '''EDIT'''
+    sdim=1
+
+    
     # need these to all be 3D
     if sdim == 3:
         for emb in range(num_spheres):
@@ -324,3 +336,6 @@ def draw_plot():
 
 def clear_plot():
     plt.cla()
+
+# def draw_graph(G, m, fig, ax):
+#     r
